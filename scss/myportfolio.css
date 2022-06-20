@@ -1,44 +1,38 @@
-$font-family: "Sacramento";
-
 * {
   padding: 0px;
   margin: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 #root {
-  height: 100vh;
-}
+  height: 100vh; }
+
 .container {
   width: 100%;
-  max-width: 1920px;
-}
+  max-width: 1920px; }
 
 .header__wrap {
   padding: 0px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee8aa;
-}
+  background-color: #eee8aa; }
+
 .header__logo {
   font-size: 30px;
   font-weight: 700;
-  font-family: $font-family;
-}
+  font-family: "Sacramento"; }
+
 .navbar {
   align-items: center;
   display: flex;
-  padding: 24px 0px;
-  &__item {
+  padding: 24px 0px; }
+  .navbar__item {
     list-style: none;
-    padding: 0px 15px;
-    &-link {
+    padding: 0px 15px; }
+    .navbar__item-link {
       text-decoration: none;
       color: black;
-      font-size: 18px;
-    }
-  }
-}
+      font-size: 18px; }
 
 .body__container {
   background-image: url("../img/background.jpg");
@@ -47,24 +41,21 @@ $font-family: "Sacramento";
   background-position: center;
   height: calc(100vh - 69px);
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .body__left {
   width: 50%;
   padding: 0px 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .body__right {
-  padding: 0px 15px;
-}
-.information__content {
-  div {
-    font-family: $font-family;
-    font-size: 28px;
-    padding: 8px 0px;
-  }
-}
+  padding: 0px 15px; }
+
+.information__content div {
+  font-family: "Sacramento";
+  font-size: 28px;
+  padding: 8px 0px; }
+
+/*# sourceMappingURL=myportfolio.css.map */
