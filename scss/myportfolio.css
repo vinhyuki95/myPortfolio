@@ -32,21 +32,23 @@
     .navbar__item-link {
       text-decoration: none;
       color: black;
-      font-size: 18px; }
+      font-size: 22px;
+      font-family: "Sacramento";
+      font-weight: 400; }
 
 .body__container {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 69px);
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: space-between; }
 
 .body__left {
   width: 50%;
-  padding: 0px 15px;
   display: flex;
+  line-height: 32px;
   justify-content: center;
   align-items: center; }
 
@@ -54,8 +56,13 @@
   padding: 0px 15px; }
 
 .information__content div {
-  font-family: "Sacramento";
-  font-size: 28px;
-  padding: 8px 0px; }
+  font-family: "Roboto";
+  font-size: 30px;
+  padding: 4px 0px;
+  font-weight: 600; }
+.information__content div:nth-child(4) {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Sacramento"; }
 
 /*# sourceMappingURL=myportfolio.css.map */
