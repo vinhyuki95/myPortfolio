@@ -24,10 +24,10 @@ inforContent.classList.add("information__content");
 bodyLeft.appendChild(inforContent);
 
 const arrInformation = [
-  "Hi",
-  "I'M  VINH,",
-  "Web Deverloper",
+  "Hello! I'm",
+  "Vinh",
   "Deverloper - Fontend",
+  "I build things for the Web",
 ];
 for (let i = 0; i < arrInformation.length; i = i + 1) {
   let textElement = document.createElement("div");
@@ -36,3 +36,8 @@ for (let i = 0; i < arrInformation.length; i = i + 1) {
   textElement.innerHTML = arrInformation[i];
   inforContent.appendChild(textElement);
 }
+
+const btt_HireMe = document.createElement("button");
+btt_HireMe.classList.add("btt_hireMe");
+btt_HireMe.textContent = "Get in touch";
+inforContent.appendChild(btt_HireMe);

@@ -1,4 +1,6 @@
 $font-family: "Sacramento";
+$font-NanumGothicExtraBold: "NanumGothicExtraBold";
+$font-Roboto: "Roboto";
 
 * {
   padding: 0px;
@@ -34,12 +36,13 @@ $font-family: "Sacramento";
     padding: 0px 15px;
     &-link {
       text-decoration: none;
-      color: black;
-      font-size: 22px;
-      // font-family: "Roboto";
-      font-family: $font-family;
-      font-weight: 400;
+      color: #897373;
+      font-size: 18px;
+      font-family: "Roboto";
     }
+    // &-link:hover {
+    //   color: ;
+    // }
   }
 }
 
@@ -54,7 +57,7 @@ $font-family: "Sacramento";
 }
 
 .body__left {
-  width: 50%;
+  width: 40%;
   display: flex;
   line-height: 32px;
   justify-content: center;
@@ -65,15 +68,46 @@ $font-family: "Sacramento";
   padding: 0px 15px;
 }
 .information__content {
+  position: relative;
   div {
-    font-family: "Roboto";
-    font-size: 30px;
     padding: 4px 0px;
-    font-weight: 600;
+    font-family: $font-Roboto;
   }
-  div:nth-child(4) {
+  div:first-child {
+    font-size: 18px;
+  }
+  div:nth-child(2) {
+    font-family: $font-Roboto;
+    font-weight: 600;
+    font-size: 60px;
+    padding: 10px 0px 20px 0px;
+  }
+  div:nth-child(3) {
     font-size: 22px;
-    font-weight: 600;
-    font-family: $font-family;
+    // font-weight: 600;
+    // font-family: $font-family;
+    padding: 10px 0px 30px 0px;
+    color: #eee8aa;
+    text-transform: capitalize;
   }
+}
+
+// .information__content::before {
+//   content: "\e1a8";
+//   font-family: "font-awesome";
+//   right: 0;
+// }
+
+.introduce__container {
+  height: 100vh;
+  width: 100%;
+  background-color: #eee8aa;
+}
+
+.btt_hireMe {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  box-shadow: 1px 2px 4px orange;
+  font-weight: 400;
 }
