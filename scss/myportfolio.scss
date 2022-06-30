@@ -1,6 +1,7 @@
 $font-family: "Sacramento";
 $font-NanumGothicExtraBold: "NanumGothicExtraBold";
 $font-Roboto: "Roboto";
+$bg-color: #212121;
 
 * {
   padding: 0px;
@@ -9,6 +10,9 @@ $font-Roboto: "Roboto";
 }
 #root {
   height: 100vh;
+  margin: 0px auto;
+  background-color: $bg-color;
+  color: white;
 }
 .container {
   width: 100%;
@@ -20,7 +24,8 @@ $font-Roboto: "Roboto";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee8aa;
+  background-color: #008b8b;
+  // background-color: #eee8aa;
 }
 .header__logo {
   font-size: 30px;
@@ -35,22 +40,23 @@ $font-Roboto: "Roboto";
     list-style: none;
     padding: 0px 15px;
     &-link {
-      text-decoration: none;
-      color: #897373;
       font-size: 18px;
       font-family: "Roboto";
+      a {
+        text-decoration: none;
+      }
     }
-    // &-link:hover {
-    //   color: ;
-    // }
+    &-link:hover {
+      color: #52524b;
+    }
   }
 }
 
 .body__container {
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  // background-image: url("../img/background.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
   height: calc(100vh - 70px);
   display: flex;
   justify-content: space-between;
@@ -75,28 +81,28 @@ $font-Roboto: "Roboto";
   }
   div:first-child {
     font-size: 18px;
+    color: white;
   }
   div:nth-child(2) {
     font-family: $font-Roboto;
     font-weight: 600;
-    font-size: 60px;
-    padding: 10px 0px 20px 0px;
+    font-size: 70px;
+    padding: 40px 0px 40px 0px;
+    color: #008b8b;
+    font-family: $font-family;
   }
   div:nth-child(3) {
     font-size: 22px;
-    // font-weight: 600;
-    // font-family: $font-family;
-    padding: 10px 0px 30px 0px;
-    color: #eee8aa;
+    font-weight: 600;
+    font-family: $font-family;
+    color: white;
     text-transform: capitalize;
+    font-family: $font-family;
+  }
+  div:nth-child(4) {
+    color: white;
   }
 }
-
-// .information__content::before {
-//   content: "\e1a8";
-//   font-family: "font-awesome";
-//   right: 0;
-// }
 
 .introduce__container {
   height: 100vh;
@@ -105,9 +111,16 @@ $font-Roboto: "Roboto";
 }
 
 .btt_hireMe {
+  margin-top: 30px;
   padding: 10px 20px;
   outline: none;
   border: none;
-  box-shadow: 1px 2px 4px orange;
+  box-shadow: 2px 2px 5px #008b8b;
   font-weight: 400;
+  border-radius: 5px;
+}
+
+.btt_hireMe:hover {
+  background-color: #008b8b;
+  color: white;
 }

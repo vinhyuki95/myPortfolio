@@ -1,104 +1,101 @@
 * {
   padding: 0px;
   margin: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 #root {
   height: 100vh;
-}
+  margin: 0px auto;
+  background-color: #212121;
+  color: white; }
 
 .container {
   width: 100%;
-  max-width: 1920px;
-}
+  max-width: 1920px; }
 
 .header__wrap {
   padding: 0px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee8aa;
-}
+  background-color: #008b8b; }
 
 .header__logo {
   font-size: 30px;
   font-weight: 700;
-  font-family: "Sacramento";
-}
+  font-family: "Sacramento"; }
 
 .navbar {
   align-items: center;
   display: flex;
-  padding: 24px 0px;
-}
-.navbar__item {
-  list-style: none;
-  padding: 0px 15px;
-}
-.navbar__item-link {
-  text-decoration: none;
-  color: #897373;
-  font-size: 18px;
-  font-family: "Roboto";
-}
+  padding: 24px 0px; }
+  .navbar__item {
+    list-style: none;
+    padding: 0px 15px; }
+    .navbar__item-link {
+      font-size: 18px;
+      font-family: "Roboto"; }
+      .navbar__item-link a {
+        text-decoration: none; }
+    .navbar__item-link:hover {
+      color: #52524b; }
 
 .body__container {
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: calc(100vh - 70px);
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .body__left {
   width: 40%;
   display: flex;
   line-height: 32px;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .body__right {
-  padding: 0px 15px;
-}
+  padding: 0px 15px; }
 
 .information__content {
-  position: relative;
-}
-.information__content div {
-  padding: 4px 0px;
-  font-family: "Roboto";
-}
-.information__content div:first-child {
-  font-size: 18px;
-}
-.information__content div:nth-child(2) {
-  font-family: "Roboto";
-  font-weight: 600;
-  font-size: 60px;
-  padding: 10px 0px 20px 0px;
-}
-.information__content div:nth-child(3) {
-  font-size: 22px;
-  padding: 10px 0px 30px 0px;
-  color: #eee8aa;
-  text-transform: capitalize;
-}
+  position: relative; }
+  .information__content div {
+    padding: 4px 0px;
+    font-family: "Roboto"; }
+  .information__content div:first-child {
+    font-size: 18px;
+    color: white; }
+  .information__content div:nth-child(2) {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 70px;
+    padding: 40px 0px 40px 0px;
+    color: #008b8b;
+    font-family: "Sacramento"; }
+  .information__content div:nth-child(3) {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Sacramento";
+    color: white;
+    text-transform: capitalize;
+    font-family: "Sacramento"; }
+  .information__content div:nth-child(4) {
+    color: white; }
 
 .introduce__container {
   height: 100vh;
   width: 100%;
-  background-color: #eee8aa;
-}
+  background-color: #eee8aa; }
 
 .btt_hireMe {
+  margin-top: 30px;
   padding: 10px 20px;
   outline: none;
   border: none;
-  box-shadow: 1px 2px 4px orange;
+  box-shadow: 2px 2px 5px #008b8b;
   font-weight: 400;
-}
+  border-radius: 5px; }
+
+.btt_hireMe:hover {
+  background-color: #008b8b;
+  color: white; }
+
 /*# sourceMappingURL=myportfolio.css.map */

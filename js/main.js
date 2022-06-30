@@ -10,7 +10,7 @@ for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   let navbarItemElement = document.createElement("li");
   navbarItemElement.classList.add("navbar__item");
 
-  let navbarItemLink = document.createElement("div");
+  let navbarItemLink = document.createElement("a");
   navbarItemLink.classList.add("navbar__item-link");
   navbarItemLink.innerHTML = arrItemNavbar[i];
 
@@ -24,7 +24,7 @@ inforContent.classList.add("information__content");
 bodyLeft.appendChild(inforContent);
 
 const arrInformation = [
-  "Hello! I'm",
+  "HI THERE!  I'M",
   "Vinh",
   "Deverloper - Fontend",
   "I build things for the Web",
@@ -41,3 +41,9 @@ const btt_HireMe = document.createElement("button");
 btt_HireMe.classList.add("btt_hireMe");
 btt_HireMe.textContent = "Get in touch";
 inforContent.appendChild(btt_HireMe);
+
+const bodyRight = document.querySelector(".body__right");
+const backgroundImg = document.createElement("img");
+backgroundImg.src = "../../background-img.png";
+console.log(backgroundImg);
+// bodyRight.appendChild(backgroundImg);
