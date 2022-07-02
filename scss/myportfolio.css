@@ -7,18 +7,28 @@
   height: 100vh;
   margin: 0px auto;
   background-color: #212121;
-  color: white; }
+  color: #ffff; }
 
 .container {
   width: 100%;
-  max-width: 1920px; }
+  max-width: 1920px;
+  padding: 0px 30px;
+  position: ralative; }
 
 .header__wrap {
-  padding: 0px 15px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #008b8b; }
+  padding: 0px 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #212121;
+  opacity: 0.8;
+  padding: 0px 30px;
+  z-index: 1;
+  color: #ffff; }
 
 .header__logo {
   font-size: 30px;
@@ -28,20 +38,21 @@
 .navbar {
   align-items: center;
   display: flex;
-  padding: 24px 0px; }
+  padding: 35px 0px; }
   .navbar__item {
     list-style: none;
     padding: 0px 15px; }
     .navbar__item-link {
       font-size: 18px;
-      font-family: "Roboto"; }
+      font-family: "Roboto";
+      color: #ffff; }
       .navbar__item-link a {
         text-decoration: none; }
     .navbar__item-link:hover {
-      color: #52524b; }
+      color: #0ff; }
 
 .body__container {
-  height: calc(100vh - 70px);
+  height: 100vh;
   display: flex;
   justify-content: space-between; }
 
@@ -65,37 +76,116 @@
     color: white; }
   .information__content div:nth-child(2) {
     font-family: "Roboto";
-    font-weight: 600;
+    font-weight: 700;
     font-size: 70px;
-    padding: 40px 0px 40px 0px;
-    color: #008b8b;
-    font-family: "Sacramento"; }
+    margin: 30px 0px; }
   .information__content div:nth-child(3) {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     font-family: "Sacramento";
     color: white;
-    text-transform: capitalize;
-    font-family: "Sacramento"; }
+    text-transform: uppercase;
+    font-family: "Roboto";
+    color: #0fb; }
   .information__content div:nth-child(4) {
     color: white; }
 
-.introduce__container {
-  height: 100vh;
-  width: 100%;
-  background-color: #eee8aa; }
-
-.btt_hireMe {
+.btt_getInTouch {
   margin-top: 30px;
-  padding: 10px 20px;
+  padding: 15px 40px;
   outline: none;
   border: none;
-  box-shadow: 2px 2px 5px #008b8b;
-  font-weight: 400;
-  border-radius: 5px; }
+  font-weight: 300;
+  border-radius: 50px;
+  background-color: #0fb;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #303030; }
 
-.btt_hireMe:hover {
+.btt_getInTouch:hover {
   background-color: #008b8b;
   color: white; }
+
+.body__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 0px; }
+  .body__right img {
+    background-repeat: no-repeat;
+    height: 600px;
+    margin-top: 30px; }
+
+.education__container {
+  height: 100vh;
+  width: 100%;
+  background-color: #2e2b2b;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px; }
+
+.education__left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: calc(100vh - 100px); }
+  .education__left img {
+    height: 85%; }
+
+.education__left::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  border-top: 9px solid #0fb;
+  border-left: 9px solid #0fb;
+  width: 56%;
+  height: 80%; }
+
+.education__right {
+  width: 40%;
+  padding-top: 50px; }
+  .education__right .education__content .education__item {
+    padding: 20px 0px;
+    font-family: "Roboto"; }
+
+.btt__hireMe {
+  margin-top: 30px;
+  padding: 15px 40px;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  border-radius: 50px;
+  background-color: #0fb;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #303030; }
+
+.btt__hireMe:hover {
+  background-color: #008b8b;
+  color: white; }
+
+.education__content .education__item:first-child {
+  position: relative;
+  color: #0fb;
+  font-size: 18px; }
+.education__content .education__item:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  background-color: #0fb;
+  width: 50px;
+  border: 1px solid #0fb;
+  border-radius: 20px;
+  height: 1px;
+  border-radius: 5px; }
+
+.education__item:nth-child(2) {
+  font-size: 30px;
+  font-weight: 400; }
 
 /*# sourceMappingURL=myportfolio.css.map */
