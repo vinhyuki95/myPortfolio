@@ -55,7 +55,7 @@ let arrEducationRight = [
   "About Me",
   "Hi! I'm Vinh I used to be a nurse before. When I moved to Singapore my degree was not accepted, so I started trying for a job. At that time I worked as a chef. After a period of experience and learning I realized that I was not suitable for that job because my health did not allow it. Subsequently I started to improve my English skills and research about the IT industry.",
   "This job required me to always have hard learning, a lot of logical thinking and constant innovation. It's a pity that my previous school environment didn't help me realize that sooner.",
-  "I asked myself: “Can I do it at this age?”. And then luckily my husband  is also a software engineer. At that moment he started teaching me to study HTML and CSS to create a basic Website. Then i used Javascript to handle even.",
+  "I asked myself: “Can I do it at this age?”. And then luckily my husband  is also a software engineer. At that moment he started teaching me to study HTML and CSS to create a basic Website. Then i used Javascript to handle event.",
   "I hope I can learn more to create the best and most beautiful Website for users.",
 ];
 
@@ -81,10 +81,42 @@ educationContent.appendChild(bttHireMe);
 
 // selector project__container
 const projectContainer = document.querySelector(".project__container");
-const titleContent = document.querySelector(".title__content");
-titleContent.textContent = "Project";
+const titleContent = document.createElement("h1");
+titleContent.classList.add("title__content");
+projectContainer.appendChild(titleContent);
+titleContent.textContent = "My Project";
 
-const textDisplay = document.querySelector("h3");
+// create h3 Element
+const textDisplay = document.createElement("h3");
 textDisplay.textContent = "Here are some websites I made in the past.";
+projectContainer.appendChild(textDisplay);
 
-// create new Element
+// create project__content
+const projectContent = document.createElement("div");
+projectContent.classList.add("project__content");
+
+projectContainer.appendChild(projectContent);
+
+//create an array
+const arrWebDemo = [
+  ["../../img/project/demo-article.png", "Writy Article Website"],
+  ["../../img/project/demo-foodDX.png", "FoodDX Website"],
+  ["../../img/project/tradingWeb-Login.png", "Trade Website"],
+];
+
+for (let i = 0; i < arrWebDemo.length; i = i + 1) {
+  const menuItemContainer = document.createElement("div");
+  menuItemContainer.classList.add("menu-item-container");
+  projectContent.appendChild(menuItemContainer);
+
+  const itemDemoImg = document.createElement("img");
+  itemDemoImg.classList.add("item__img");
+  itemDemoImg.src = arrWebDemo[i][0];
+  menuItemContainer.appendChild(itemDemoImg);
+  console.log(menuItemContainer);
+
+  const itemDemoName = document.createElement("div");
+  itemDemoName.classList.add("item__name");
+  itemDemoName.innerHTML = arrWebDemo[i][1];
+  menuItemContainer.appendChild(itemDemoName);
+}
