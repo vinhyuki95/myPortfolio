@@ -67,7 +67,8 @@
   padding: 0px 15px; }
 
 .information__content {
-  position: relative; }
+  position: relative;
+  padding-left: 100px; }
   .information__content div {
     padding: 4px 0px;
     font-family: "Roboto"; }
@@ -80,7 +81,7 @@
     font-size: 70px;
     margin: 30px 0px; }
   .information__content div:nth-child(3) {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     font-family: "Sacramento";
     color: white;
@@ -88,7 +89,8 @@
     font-family: "Roboto";
     color: #0fb; }
   .information__content div:nth-child(4) {
-    color: white; }
+    color: white;
+    font-size: 20px; }
 
 .btt_getInTouch {
   margin-top: 30px;
@@ -122,10 +124,10 @@
   width: 100%;
   background-color: #2e2b2b;
   display: flex;
-  justify-content: center;
-  padding-top: 100px; }
+  justify-content: center; }
 
 .education__left {
+  margin-top: 60px;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -147,9 +149,11 @@
 
 .education__right {
   width: 40%;
-  padding-top: 50px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .education__right .education__content .education__item {
-    padding: 20px 0px;
+    padding: 8px 0px;
     font-family: "Roboto"; }
 
 .btt__hireMe {
@@ -187,5 +191,23 @@
 .education__item:nth-child(2) {
   font-size: 30px;
   font-weight: 400; }
+
+.project__container {
+  height: 100vh;
+  background-color: #2e2b2b;
+  color: black;
+  padding-top: 50px; }
+
+.title__content,
+h3 {
+  font-family: "Roboto";
+  text-align: center;
+  color: #ffff; }
+
+.title__content {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: #0fb; }
 
 /*# sourceMappingURL=myportfolio.css.map */

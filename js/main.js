@@ -1,12 +1,6 @@
 //selector navbar
 const navbar = document.querySelector(".navbar");
-const arrItemNavbar = [
-  "Home",
-  "Education",
-  "Experience",
-  "Project",
-  "Contact Me",
-];
+const arrItemNavbar = ["Home", "Education", "Project", "Contact Me"];
 for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   let navbarItemElement = document.createElement("li");
   navbarItemElement.classList.add("navbar__item");
@@ -28,7 +22,7 @@ const arrInformation = [
   "HI THERE! I'M",
   "VINH",
   "Developer - Frontend",
-  "I build things for the Web",
+  "I build the best for the Website",
 ];
 for (let i = 0; i < arrInformation.length; i = i + 1) {
   let textElement = document.createElement("div");
@@ -59,20 +53,21 @@ const educationRight = document.querySelector(".education__right");
 let arrEducationRight = [
   "Who I am",
   "About Me",
-  "I’m Vinh, a professional front end development skills. I am passionate about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences. I honed my skills at web development, technical writing, product design and SEO analytics.",
-  "I develop websites with HTML, CSS and JavaScript.",
-  "Being a diligent, hardworking and result oriented lady, I always work towards achieving best result on each project I lay my hands on.",
+  "Hi! I'm Vinh I used to be a nurse before. When I moved to Singapore my degree was not accepted, so I started trying for a job. At that time I worked as a chef. After a period of experience and learning I realized that I was not suitable for that job because my health did not allow it. Subsequently I started to improve my English skills and research about the IT industry.",
+  "This job required me to always have hard learning, a lot of logical thinking and constant innovation. It's a pity that my previous school environment didn't help me realize that sooner.",
+  "I asked myself: “Can I do it at this age?”. And then luckily my husband  is also a software engineer. At that moment he started teaching me to study HTML and CSS to create a basic Website. Then i used Javascript to handle even.",
+  "I hope I can learn more to create the best and most beautiful Website for users.",
 ];
 
 let educationContent = document.createElement("div");
 educationContent.classList.add("education__content");
 
 //Tạo vòng lặp để chạy qua từng phần tử của arr
+//Tạo một thẻ bọc sau đó gán các phần tử vào thẻ bọc đó
 for (let i = 0; i < arrEducationRight.length; i = i + 1) {
   let educationItem = document.createElement("div");
   educationItem.classList.add("education__item");
   educationItem.innerHTML = arrEducationRight[i];
-  console.log(educationItem);
 
   educationContent.appendChild(educationItem);
   educationRight.appendChild(educationContent);
@@ -83,4 +78,13 @@ bttHireMe.classList.add("btt__hireMe");
 bttHireMe.textContent = "Hire Me";
 
 educationContent.appendChild(bttHireMe);
-console.log(bttHireMe);
+
+// selector project__container
+const projectContainer = document.querySelector(".project__container");
+const titleContent = document.querySelector(".title__content");
+titleContent.textContent = "Project";
+
+const textDisplay = document.querySelector("h3");
+textDisplay.textContent = "Here are some websites I made in the past.";
+
+// create new Element
