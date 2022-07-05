@@ -19,7 +19,8 @@ inforContent.classList.add("information__content");
 bodyLeft.appendChild(inforContent);
 
 const arrInformation = [
-  "HI THERE! I'M",
+  "HELLO, MY NAME IS",
+  "",
   "VINH",
   "Developer - Frontend",
   "I build the best for the Website",
@@ -113,10 +114,20 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoImg.classList.add("item__img");
   itemDemoImg.src = arrWebDemo[i][0];
   menuItemContainer.appendChild(itemDemoImg);
-  console.log(menuItemContainer);
 
   const itemDemoName = document.createElement("div");
   itemDemoName.classList.add("item__name");
   itemDemoName.innerHTML = arrWebDemo[i][1];
   menuItemContainer.appendChild(itemDemoName);
 }
+//event onmouseover & onmouseout
+const menuLastChild = document.querySelector(
+  ".menu-item-container:last-child .item__img:first-child"
+);
+menuLastChild.onmouseover = function () {
+  this.src = "../../img/project/market-picture1.png";
+};
+menuLastChild.onmouseout = function () {
+  this.src = "../../img/project/market-picture2.png";
+};
+//end-event
