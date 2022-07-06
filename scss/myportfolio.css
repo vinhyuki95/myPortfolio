@@ -8,7 +8,7 @@
   height: 100vh;
   margin: 0px auto;
   background-color: #222733;
-  color: #ffff;
+  color: white;
 }
 
 .container {
@@ -30,7 +30,7 @@
   opacity: 0.8;
   padding: 0px 162px;
   z-index: 1;
-  color: #ffff;
+  color: white;
 }
 
 .header__logo {
@@ -52,7 +52,7 @@
 .navbar__item-link {
   font-size: 18px;
   font-family: "Roboto";
-  color: #ffff;
+  color: white;
   cursor: pointer;
 }
 .navbar__item-link a {
@@ -162,7 +162,7 @@
 }
 
 .education__left {
-  margin-top: 0px;
+  margin-top: 50px;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -243,7 +243,7 @@
 h3 {
   font-family: "Roboto";
   text-align: center;
-  color: #ffff;
+  color: white;
 }
 
 .title__content {

@@ -100,9 +100,16 @@ projectContainer.appendChild(projectContent);
 
 //create an array
 const arrWebDemo = [
-  ["../../img/project/demo-article.png", "Writy Article Website"],
-  ["../../img/project/demo-foodDX.png", "FoodDX Website"],
-  ["../../img/project/tradingWeb-Login.png", "Trade Website"],
+  [["../../img/project/demo-article.png"], "Writy Article Website"],
+  [["../../img/project/demo-foodDX.png"], "FoodDX Website"],
+  [
+    [
+      "../../img/project/tradingWeb-Login.png",
+      "../../img/project/market-picture1.png",
+      "../../img/project/market-picture2.png",
+    ],
+    "Trade Website",
+  ],
 ];
 
 for (let i = 0; i < arrWebDemo.length; i = i + 1) {
@@ -114,6 +121,24 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoImg.classList.add("item__img");
   itemDemoImg.src = arrWebDemo[i][0];
   menuItemContainer.appendChild(itemDemoImg);
+  console.log(menuItemContainer);
+
+  if (arrWebDemo[i][0][1] !== undefined) {
+    const menuLastChild = document.querySelector(
+      ".menu-item-container:last-child .item__img:first-child"
+    );
+    console.log(menuLastChild);
+    menuLastChild.src = arrWebDemo[i][0][0];
+    let currentIndex = -1;
+    setInterval(function () {
+      currentIndex += 1;
+      currentIndex %= arrWebDemo.length;
+      document.querySelector(".menu-item-container:last-child .item__img").src =
+        arrWebDemo[i][0][currentIndex];
+      menuLastChild.innerHTML = arrWebDemo[i][0][currentIndex];
+      console.log(menuLastChild);
+    }, 2000);
+  }
 
   const itemDemoName = document.createElement("div");
   itemDemoName.classList.add("item__name");
@@ -121,13 +146,13 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   menuItemContainer.appendChild(itemDemoName);
 }
 //event onmouseover & onmouseout
-const menuLastChild = document.querySelector(
-  ".menu-item-container:last-child .item__img:first-child"
-);
-menuLastChild.onmouseover = function () {
-  this.src = "../../img/project/market-picture1.png";
-};
-menuLastChild.onmouseout = function () {
-  this.src = "../../img/project/market-picture2.png";
-};
+// const menuLastChild = document.querySelector(
+//   ".menu-item-container:last-child .item__img:first-child"
+// );
+// menuLastChild.onmouseover = function () {
+//   this.src = "../../img/project/market-picture1.png";
+// };
+// menuLastChild.onmouseout = function () {
+//   this.src = "../../img/project/market-picture2.png";
+// };
 //end-event
