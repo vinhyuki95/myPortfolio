@@ -101,7 +101,18 @@ projectContainer.appendChild(projectContent);
 //create an array
 const arrWebDemo = [
   [["../../img/project/demo-article.png"], "Writy Article Website"],
-  [["../../img/project/demo-foodDX.png"], "FoodDX Website"],
+  [
+    [
+      "../../img/project/demo1-foodDX.png",
+      "../../img/project/demo2-foodDX.png",
+      "../../img/project/demo3-foodDX.png",
+      "../../img/project/demo4-foodDX.png",
+      "../../img/project/demo5-foodDX.png",
+      "../../img/project/demo6-foodDX.png",
+      "../../img/project/demo7-foodDX.png",
+    ],
+    "FoodDX Website",
+  ],
   [
     [
       "../../img/project/tradingWeb-Login.png",
@@ -121,23 +132,21 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoImg.classList.add("item__img");
   itemDemoImg.src = arrWebDemo[i][0];
   menuItemContainer.appendChild(itemDemoImg);
-  console.log(menuItemContainer);
 
-  if (arrWebDemo[i][0][1] !== undefined) {
-    const menuLastChild = document.querySelector(
-      ".menu-item-container:last-child .item__img:first-child"
+  if (arrWebDemo[i][0][2] !== undefined) {
+    const marketDemo = document.querySelector(
+      ".menu-item-container:last-child .item__img"
     );
-    console.log(menuLastChild);
-    menuLastChild.src = arrWebDemo[i][0][0];
+    marketDemo.src = arrWebDemo[i][0][0];
     let currentIndex = -1;
     setInterval(function () {
       currentIndex += 1;
       currentIndex %= arrWebDemo.length;
-      document.querySelector(".menu-item-container:last-child .item__img").src =
-        arrWebDemo[i][0][currentIndex];
-      menuLastChild.innerHTML = arrWebDemo[i][0][currentIndex];
-      console.log(menuLastChild);
-    }, 2000);
+
+      document.querySelector(
+        `.menu-item-container:nth-child(${i + 1}) .item__img`
+      ).src = arrWebDemo[i][0][currentIndex];
+    }, 2500);
   }
 
   const itemDemoName = document.createElement("div");
@@ -145,14 +154,3 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoName.innerHTML = arrWebDemo[i][1];
   menuItemContainer.appendChild(itemDemoName);
 }
-//event onmouseover & onmouseout
-// const menuLastChild = document.querySelector(
-//   ".menu-item-container:last-child .item__img:first-child"
-// );
-// menuLastChild.onmouseover = function () {
-//   this.src = "../../img/project/market-picture1.png";
-// };
-// menuLastChild.onmouseout = function () {
-//   this.src = "../../img/project/market-picture2.png";
-// };
-//end-event
