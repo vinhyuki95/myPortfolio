@@ -133,24 +133,9 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoImg.src = arrWebDemo[i][0];
   menuItemContainer.appendChild(itemDemoImg);
 
-  // if (arrWebDemo[i][0][2] !== undefined) {
-  //   const marketDemo = document.querySelector(
-  //     ".menu-item-container .item__img"
-  //   );
-  //   marketDemo.src = arrWebDemo[i][0][0];
-  //   let currentIndex = -1;
-  //   setInterval(function () {
-  //     currentIndex += 1;
-  //     currentIndex %= arrWebDemo.length;
-  //     document.querySelector(
-  //       `.menu-item-container:nth-child(${i + 1}) .item__img`
-  //     ).src = arrWebDemo[i][0][currentIndex];
-  //   }, 1000);
-  // }
-
   if (arrWebDemo[i][0][2] !== undefined) {
     const marketDemo = document.querySelector(
-      ".menu-item-container .item__img"
+      ".menu-item-container:last-child .item__img"
     );
     marketDemo.src = arrWebDemo[i][0][0];
     let currentIndex = -1;

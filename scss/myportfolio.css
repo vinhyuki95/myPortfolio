@@ -198,10 +198,13 @@
 
 .project__container::before {
   content: "";
-  height: 5px;
-  width: 50%;
-  top: 0;
-  background-color: #0fb; }
+  height: 1px;
+  width: 20%;
+  top: 170px;
+  left: 40%;
+  border-top: 2px solid white;
+  position: absolute;
+  margin: 0 auto; }
 
 .title__content,
 h3 {
@@ -219,7 +222,7 @@ h3 {
   margin-bottom: 80px; }
 
 .project__content {
-  padding: 40px 0px;
+  padding-top: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
