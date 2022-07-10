@@ -154,3 +154,5 @@ for (let i = 0; i < arrWebDemo.length; i = i + 1) {
   itemDemoName.innerHTML = arrWebDemo[i][1];
   menuItemContainer.appendChild(itemDemoName);
 }
+
+const footerElement = document.querySelector(".footer");

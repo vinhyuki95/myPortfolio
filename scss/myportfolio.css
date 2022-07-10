@@ -4,9 +4,8 @@
   box-sizing: border-box; }
 
 #root {
-  height: 100vh;
   margin: 0px auto;
-  background-color: #222733;
+  background-color: #191b1f;
   color: #ffff; }
 
 .container {
@@ -20,10 +19,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
-  background-color: #222733;
+  background-color: #191b1f;
   opacity: 0.8;
   padding: 0px 162px;
   z-index: 1;
@@ -100,6 +99,9 @@
     color: white;
     font-size: 20px; }
 
+.footer {
+  height: 100vh; }
+
 .btt_getInTouch,
 .btt__hireMe {
   margin-top: 30px;
@@ -132,7 +134,7 @@
 .education__container {
   height: 100vh;
   width: 100%;
-  background-color: #222733;
+  background-color: #191b1f;
   display: flex;
   justify-content: center; }
 
@@ -191,7 +193,7 @@
 
 .project__container {
   height: 100vh;
-  background-color: #222733;
+  background-color: #191b1f;
   color: black;
   padding-top: 60px;
   position: relative; }

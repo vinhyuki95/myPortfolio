@@ -1,7 +1,7 @@
 $font-family: "Sacramento";
 $font-NanumGothicExtraBold: "NanumGothicExtraBold";
 $font-Roboto: "Roboto";
-$bg-black: #222733;
+$bg-black: #191b1f;
 $col-white: #ffff;
 $col-blue: #0ff;
 $col-green: #0fb;
@@ -12,7 +12,7 @@ $col-green: #0fb;
   box-sizing: border-box;
 }
 #root {
-  height: 100vh;
+  // height: 100vh;
   margin: 0px auto;
   background-color: $bg-black;
   color: $col-white;
@@ -30,7 +30,7 @@ $col-green: #0fb;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   background-color: $bg-black;
@@ -122,6 +122,9 @@ $col-green: #0fb;
     color: white;
     font-size: 20px;
   }
+}
+.footer {
+  height: 100vh;
 }
 
 .btt_getInTouch,
