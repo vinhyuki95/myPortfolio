@@ -99,10 +99,71 @@ projectContent.classList.add("project__content");
 projectContainer.appendChild(projectContent);
 
 //create an array
-const arrWebDemo = [
-  [["../../img/project/demo-article.png"], "Writy Article Website"],
-  [
-    [
+// const arrWebDemo = [
+//   [["../../img/project/demo-article.png"], "Writy Article Website"],
+//   [
+// [
+//   "../../img/project/demo1-foodDX.png",
+//   "../../img/project/demo2-foodDX.png",
+//   "../../img/project/demo3-foodDX.png",
+//   "../../img/project/demo4-foodDX.png",
+//   "../../img/project/demo5-foodDX.png",
+//   "../../img/project/demo6-foodDX.png",
+//   "../../img/project/demo7-foodDX.png",
+// ],
+//     "FoodDX Website",
+//   ],
+//   [
+//     [
+//       "../../img/project/tradingWeb-Login.png",
+//       "../../img/project/market-picture1.png",
+//       "../../img/project/market-picture2.png",
+//     ],
+//     "Trade Website",
+//   ],
+// ];
+
+// for (let i = 0; i < arrWebDemo.length; i = i + 1) {
+//   const menuItemContainer = document.createElement("div");
+//   menuItemContainer.classList.add("menu-item-container");
+//   projectContent.appendChild(menuItemContainer);
+
+//   const itemDemoImg = document.createElement("img");
+//   itemDemoImg.classList.add("item__img");
+//   itemDemoImg.src = arrWebDemo[i][0];
+//   menuItemContainer.appendChild(itemDemoImg);
+
+//   if (arrWebDemo[i][0][2] !== undefined) {
+//     const marketDemo = document.querySelector(
+//       ".menu-item-container:last-child .item__img"
+//     );
+//     marketDemo.src = arrWebDemo[i][0][0];
+//     let currentIndex = -1;
+//     setInterval(function () {
+//       currentIndex += 1;
+//       currentIndex %= arrWebDemo.length;
+
+//       document.querySelector(
+//         `.menu-item-container:nth-child(${i + 1}) .item__img`
+//       ).src = arrWebDemo[i][0][currentIndex];
+//     }, 2000);
+//   }
+
+//   const itemDemoName = document.createElement("div");
+//   itemDemoName.classList.add("item__name");
+//   itemDemoName.innerHTML = arrWebDemo[i][1];
+//   menuItemContainer.appendChild(itemDemoName);
+// }
+
+// const footerElement = document.querySelector(".footer");
+
+const projects = [
+  {
+    images: ["../../img/project/demo-article.png"],
+    titleImg: "Writy Article Website",
+  },
+  {
+    images: [
       "../../img/project/demo1-foodDX.png",
       "../../img/project/demo2-foodDX.png",
       "../../img/project/demo3-foodDX.png",
@@ -111,48 +172,42 @@ const arrWebDemo = [
       "../../img/project/demo6-foodDX.png",
       "../../img/project/demo7-foodDX.png",
     ],
-    "FoodDX Website",
-  ],
-  [
-    [
+    titleImg: "FoodDX Website",
+  },
+  {
+    images: [
       "../../img/project/tradingWeb-Login.png",
       "../../img/project/market-picture1.png",
       "../../img/project/market-picture2.png",
     ],
-    "Trade Website",
-  ],
+    titleImg: "Trade Website",
+  },
 ];
-
-for (let i = 0; i < arrWebDemo.length; i = i + 1) {
+// console.log(projects);
+for (let i = 0; i < projects.length; i = i + 1) {
   const menuItemContainer = document.createElement("div");
   menuItemContainer.classList.add("menu-item-container");
-  projectContent.appendChild(menuItemContainer);
 
-  const itemDemoImg = document.createElement("img");
-  itemDemoImg.classList.add("item__img");
-  itemDemoImg.src = arrWebDemo[i][0];
-  menuItemContainer.appendChild(itemDemoImg);
+  const project = projects[i];
+  let itemImg = document.createElement("img");
+  itemImg.classList.add("item__img");
+  menuItemContainer.appendChild(itemImg);
+  itemImg.src = project.images[0];
 
-  if (arrWebDemo[i][0][2] !== undefined) {
-    const marketDemo = document.querySelector(
-      ".menu-item-container:last-child .item__img"
-    );
-    marketDemo.src = arrWebDemo[i][0][0];
+  if (project.images[1] !== undefined) {
     let currentIndex = -1;
     setInterval(function () {
       currentIndex += 1;
-      currentIndex %= arrWebDemo.length;
-
-      document.querySelector(
-        `.menu-item-container:nth-child(${i + 1}) .item__img`
-      ).src = arrWebDemo[i][0][currentIndex];
+      currentIndex %= projects.length;
+      itemImg.src = project.images[currentIndex];
+      console.log(itemImg);
     }, 2000);
   }
 
-  const itemDemoName = document.createElement("div");
-  itemDemoName.classList.add("item__name");
-  itemDemoName.innerHTML = arrWebDemo[i][1];
-  menuItemContainer.appendChild(itemDemoName);
-}
+  let itemName = document.createElement("div");
+  itemName.classList.add("item__name");
+  menuItemContainer.appendChild(itemName);
+  itemName.innerHTML = project.titleImg;
 
-const footerElement = document.querySelector(".footer");
+  projectContent.appendChild(menuItemContainer);
+}
