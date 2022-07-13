@@ -4,7 +4,7 @@ $font-Roboto: "Roboto";
 $bg-black: #191b1f;
 $col-white: #ffff;
 $col-blue: #0ff;
-$col-green: #0fb;
+$col-green: #08fdd8;
 
 * {
   padding: 0px;
@@ -35,7 +35,6 @@ $col-green: #0fb;
   top: 0;
   background-color: $bg-black;
   opacity: 0.8;
-  padding: 0px 162px;
   z-index: 1;
   color: $col-white;
 }
@@ -70,22 +69,18 @@ $col-green: #0fb;
 .body__container {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
-}
-
-.body__left {
-  width: 40%;
-  display: flex;
-  line-height: 32px;
   justify-content: center;
   align-items: center;
 }
 
-.body__right {
-  padding: 0px 15px;
+.body__left {
+  width: 70%;
+  display: flex;
+  line-height: 32px;
+  justify-content: center;
 }
+
 .information__content {
-  padding: 50px 0px 0px 100px;
   div {
     padding: 4px 0px;
     font-family: $font-Roboto;
@@ -116,33 +111,32 @@ $col-green: #0fb;
     color: white;
     text-transform: uppercase;
     font-family: $font-Roboto;
-    color: #0fb;
+    color: $col-green;
   }
   div:nth-child(5) {
     color: white;
     font-size: 20px;
   }
 }
-.footer {
-  height: 100vh;
-}
 
 .btt_getInTouch,
 .btt__hireMe {
-  margin-top: 30px;
+  margin-top: 16px;
   padding: 15px 40px;
   outline: none;
   border: none;
   font-weight: 300;
-  border-radius: 50px;
-  background-color: #0fb;
+  border-radius: 10px;
   font-size: 18px;
   font-family: sans-serif;
-  color: #303030;
   cursor: pointer;
+  background-color: $bg-black;
+  border: 1px solid #08fdd8;
+  color: #08fdd8;
 }
 
-.btt_getInTouch:hover {
+.btt_getInTouch:hover,
+.btt__hireMe:hover {
   background-color: #008b8b;
   color: white;
 }
@@ -151,12 +145,16 @@ $col-green: #0fb;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   padding: 0px;
   img {
     background-repeat: no-repeat;
-    height: 600px;
-    margin-top: 58px;
+    height: 500px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+    opacity: 0.6;
+    border-radius: 60px;
   }
 }
 // education__container
@@ -170,7 +168,7 @@ $col-green: #0fb;
 
 .education__left {
   margin-top: 50px;
-  width: 50%;
+  width: 46%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,9 +183,9 @@ $col-green: #0fb;
   content: "";
   position: absolute;
   top: 20px;
-  left: 120px;
-  border-top: 9px solid #0fb;
-  border-left: 9px solid #0fb;
+  left: 72px;
+  border-top: 9px solid$col-green;
+  border-left: 9px solid$col-green;
   width: 56%;
   height: 80%;
 }
@@ -199,31 +197,29 @@ $col-green: #0fb;
   justify-content: center;
   .education__content {
     .education__item {
-      padding: 8px 0px;
-      font-family: $font-Roboto;
+      padding: 2px 0px;
+      font-family: "Quicksand", Arial, sans-serif;
+      line-height: 1.8;
+      // font-size: 15px;
     }
   }
-}
-
-.btt__hireMe:hover {
-  background-color: #008b8b;
-  color: white;
 }
 
 .education__content {
   .education__item:first-child {
     position: relative;
-    color: #0fb;
+    color: $col-green;
     font-size: 18px;
+    font-family: "Quicksand";
   }
   .education__item:first-child::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 100px;
-    background-color: #0fb;
+    background-color: $col-green;
     width: 50px;
-    border: 1px solid #0fb;
+    border: 1px solid$col-green;
     height: 1px;
     border-radius: 5px;
   }
@@ -232,13 +228,14 @@ $col-green: #0fb;
 .education__item:nth-child(2) {
   font-size: 30px;
   font-weight: 400;
+  font-family: "Playfair Display";
 }
 
 // project__container
 .project__container {
   height: 100vh;
   background-color: $bg-black;
-  color: black;
+  color: white;
   padding-top: 60px;
   position: relative;
 }
@@ -304,4 +301,10 @@ h3 {
 
 .menu-item-container:last-child .item__img {
   transition: 500ms;
+}
+
+// footer
+.footer {
+  height: 100vh;
+  background-color: $bg-black;
 }
