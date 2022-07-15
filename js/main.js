@@ -1,3 +1,4 @@
+//header__wrap
 //selector navbar
 const navbar = document.querySelector(".navbar");
 const arrItemNavbar = ["Home", "About", "Project", "Portfolio", "Contact Me"];
@@ -12,6 +13,11 @@ for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   navbarItemElement.appendChild(navbarItemLink);
   navbar.appendChild(navbarItemElement);
 }
+// const globalLogo = document.createElement("img");
+// globalLogo.classList.add("global__logo");
+// globalLogo.src = "../../img/globe-solid.svg";
+
+// end header__wrap
 
 const bodyLeft = document.querySelector(".body__left");
 let inforContent = document.createElement("div");
@@ -202,11 +208,10 @@ for (let i = 0; i < projects.length; i = i + 1) {
     console.log(itemImg);
   }, 2000);
 
-  let itemName = document.createElement("div");
+  let itemName = document.createElement("a");
   itemName.classList.add("item__name");
   menuItem.appendChild(itemName);
   itemName.innerHTML = project.titleImg;
-
   projectContent.appendChild(menuItem);
 }
 
@@ -227,7 +232,7 @@ const arrtitles = [
   },
 
   {
-    titleText: "CONTACT",
+    titleText: "Contact Me",
   },
 ];
 
@@ -304,6 +309,11 @@ bttSubject.placeholder = "Subject";
 const bttMessage = document.querySelector("input:nth-child(4)");
 bttMessage.classList.add("btt__message");
 bttMessage.placeholder = "Enter your message";
+// create a button
+const bttSendMessage = document.createElement("button");
+bttSendMessage.classList.add("btt__sentMessage");
+bttSendMessage.textContent = "Send message!";
+flexRight.appendChild(bttSendMessage);
 
 //display footer content
 const rootElement = document.querySelector("#root");
