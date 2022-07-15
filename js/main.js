@@ -1,12 +1,6 @@
 //selector navbar
 const navbar = document.querySelector(".navbar");
-const arrItemNavbar = [
-  "Home",
-  "Education",
-  "Project",
-  "Portfolio",
-  "Contact Me",
-];
+const arrItemNavbar = ["Home", "About", "Project", "Portfolio", "Contact Me"];
 for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   let navbarItemElement = document.createElement("li");
   navbarItemElement.classList.add("navbar__item");
@@ -28,7 +22,7 @@ const arrInformation = [
   "HELLO, MY NAME IS",
   "",
   "VINH",
-  "Developer - Frontend",
+  "Frontend - Developer",
   "I build the best for the Website",
 ];
 for (let i = 0; i < arrInformation.length; i = i + 1) {
@@ -49,15 +43,15 @@ const backgroundImg = document.createElement("img");
 backgroundImg.src = "../img/bg-right.jpg";
 bodyRight.appendChild(backgroundImg);
 
-//selector education__left
-const educationLeft = document.querySelector(".education__left");
+//selector about__left
+const aboutLeft = document.querySelector(".about__left");
 const avataImg = document.createElement("img");
 avataImg.src = "../img/avata.jpg";
-educationLeft.appendChild(avataImg);
+aboutLeft.appendChild(avataImg);
 
-//selector education__right
-const educationRight = document.querySelector(".education__right");
-let arrEducationRight = [
+//selector about__right
+const aboutRight = document.querySelector(".about__right");
+let arraboutRight = [
   "Who I am ?",
   "About Me",
   "Hi! I'm Vinh I used to be a nurse before. When I moved to Singapore my degree was not accepted, I started trying for some job. At that time I worked as a chef. After a period of experience and learning I realized that I was not suitable for this job because my health did not allow it. Subsequently I started to improve my English skills and research about the IT industry.",
@@ -66,25 +60,25 @@ let arrEducationRight = [
   "I hope I can learn more to create the best and most beautiful Website for users.",
 ];
 
-let educationContent = document.createElement("div");
-educationContent.classList.add("education__content");
+let aboutContent = document.createElement("div");
+aboutContent.classList.add("about__content");
 
 //Tạo vòng lặp để chạy qua từng phần tử của arr
 //Tạo một thẻ bọc sau đó gán các phần tử vào thẻ bọc đó
-for (let i = 0; i < arrEducationRight.length; i = i + 1) {
-  let educationItem = document.createElement("div");
-  educationItem.classList.add("education__item");
-  educationItem.innerHTML = arrEducationRight[i];
+for (let i = 0; i < arraboutRight.length; i = i + 1) {
+  let aboutItem = document.createElement("div");
+  aboutItem.classList.add("about__item");
+  aboutItem.innerHTML = arraboutRight[i];
 
-  educationContent.appendChild(educationItem);
-  educationRight.appendChild(educationContent);
+  aboutContent.appendChild(aboutItem);
+  aboutRight.appendChild(aboutContent);
 }
 
 const bttHireMe = document.createElement("button");
 bttHireMe.classList.add("btt__hireMe");
 bttHireMe.textContent = "Hire Me";
 
-educationContent.appendChild(bttHireMe);
+aboutContent.appendChild(bttHireMe);
 
 // selector project__containerWrap
 const projectContainer = document.querySelector(".project__container");
@@ -188,7 +182,7 @@ const projects = [
     titleImg: "Trade Website",
   },
 ];
-// console.log(projects);
+
 for (let i = 0; i < projects.length; i = i + 1) {
   const menuItem = document.createElement("div");
   menuItem.classList.add("menu-item-container");
@@ -216,4 +210,124 @@ for (let i = 0; i < projects.length; i = i + 1) {
   projectContent.appendChild(menuItem);
 }
 
-const footerElement = document.querySelector(".footer");
+// selector contact__container
+const contactContainerElement = document.querySelector(".contact__container");
+
+const contactContent = document.createElement("div");
+contactContent.classList.add("contact__content");
+contactContainerElement.appendChild(contactContent);
+
+const footer = document.createElement("div");
+footer.classList.add("footer");
+contactContainerElement.appendChild(footer);
+
+const inner = document.createElement("div");
+inner.classList.add("inner");
+contactContent.appendChild(inner);
+
+const arrtitles = [
+  {
+    titleText: "GET IN TOUCH",
+  },
+
+  {
+    titleText: "CONTACT",
+  },
+];
+
+for (let i = 0; i < arrtitles.length; i = i + 1) {
+  const contact = arrtitles[i];
+  const titleItem = document.createElement("div");
+  titleItem.classList.add("title__item");
+  titleItem.innerHTML = contact.titleText;
+  inner.appendChild(titleItem);
+}
+
+//create flex box chứa nội dụng contact
+const flexBox = document.createElement("div");
+flexBox.classList.add("flexBox");
+contactContent.appendChild(flexBox);
+
+//appendChild flexLeft into flexBox
+const flexLeft = document.createElement("div");
+flexLeft.classList.add("flexLeft");
+flexBox.appendChild(flexLeft);
+
+const flexRight = document.createElement("div");
+flexRight.classList.add("flexRight");
+flexBox.appendChild(flexRight);
+
+//create arr for flexLeft
+const arrflexLeft = [
+  ["../../img/icon-contact/email-icon.svg", "Vinhyuki1995@gmail.com"],
+  [
+    "../../img/icon-contact/location-icon.svg",
+    "#13-22 Lorong2 Toa Payoh Center",
+  ],
+  ["../../img/icon-contact/phone-icon.svg", "+ 65-9893-1879"],
+];
+for (let i = 0; i < arrflexLeft.length; i = i + 1) {
+  const menuItemContainer = document.createElement("div");
+  menuItemContainer.classList.add("flexLeft__menu");
+  flexLeft.appendChild(menuItemContainer);
+
+  const imgItem = document.createElement("img");
+  imgItem.classList.add("img__item");
+  imgItem.src = arrflexLeft[i][0];
+  menuItemContainer.appendChild(imgItem);
+
+  const informationItem = document.createElement("a");
+  informationItem.classList.add("information__item");
+  informationItem.href = "#";
+  informationItem.innerHTML = arrflexLeft[i][1];
+  menuItemContainer.appendChild(informationItem);
+}
+
+//create arr for flexRight
+const arrFlexRight = ["", "", "", ""];
+for (let i = 0; i < arrFlexRight.length; i = i + 1) {
+  const bttMenu = document.createElement("input");
+  // bttMenu.classList.add("btt__item");
+  bttMenu.innerHTML = arrFlexRight[i];
+  // bttMenu.placeholder = "name";
+  flexRight.appendChild(bttMenu);
+}
+
+const bttName = document.querySelector("input:nth-child(1)");
+bttName.classList.add("btt__name");
+bttName.placeholder = "Full Name";
+
+const bttEmail = document.querySelector("input:nth-child(2)");
+bttEmail.classList.add("btt__mail");
+bttEmail.placeholder = "Email";
+
+const bttSubject = document.querySelector("input:nth-child(3)");
+bttSubject.classList.add("btt__subject");
+bttSubject.placeholder = "Subject";
+
+const bttMessage = document.querySelector("input:nth-child(4)");
+bttMessage.classList.add("btt__message");
+bttMessage.placeholder = "Enter your message";
+
+// const arrFlexRight = [
+//   {
+//     btt: "",
+//   },
+//   {
+//     btt: "",
+//   },
+//   {
+//     btt: "",
+//   },
+//   {
+//     btt: "",
+//   },
+// ];
+
+// for (let i = 0; i < arrFlexRight.length; i = i + 1) {
+//   const bttName = document.createElement("input");
+//   bttName.classList.add("btt__name");
+//   bttName.placeholder = "name";
+//   bttName.innerHTML = arrFlexRight[i][0];
+//   flexRight.appendChild(bttName);
+// }
