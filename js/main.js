@@ -217,10 +217,6 @@ const contactContent = document.createElement("div");
 contactContent.classList.add("contact__content");
 contactContainerElement.appendChild(contactContent);
 
-const footer = document.createElement("div");
-footer.classList.add("footer");
-contactContainerElement.appendChild(footer);
-
 const inner = document.createElement("div");
 inner.classList.add("inner");
 contactContent.appendChild(inner);
@@ -309,25 +305,30 @@ const bttMessage = document.querySelector("input:nth-child(4)");
 bttMessage.classList.add("btt__message");
 bttMessage.placeholder = "Enter your message";
 
-// const arrFlexRight = [
-//   {
-//     btt: "",
-//   },
-//   {
-//     btt: "",
-//   },
-//   {
-//     btt: "",
-//   },
-//   {
-//     btt: "",
-//   },
-// ];
+//display footer content
+const rootElement = document.querySelector("#root");
+const footer = document.createElement("div");
+footer.classList.add("footer");
+rootElement.appendChild(footer);
 
-// for (let i = 0; i < arrFlexRight.length; i = i + 1) {
-//   const bttName = document.createElement("input");
-//   bttName.classList.add("btt__name");
-//   bttName.placeholder = "name";
-//   bttName.innerHTML = arrFlexRight[i][0];
-//   flexRight.appendChild(bttName);
-// }
+const brandLogo = document.createElement("div");
+brandLogo.classList.add("brand__logo");
+footer.appendChild(brandLogo);
+
+const arrBrandLogo = [
+  "../../img/footer/facebook-brand.svg",
+  "../../img/footer/github-brand.svg",
+  "../../img/footer/linkedin-brand.svg",
+];
+
+for (let i = 0; i < arrBrandLogo.length; i = i + 1) {
+  const logoBox = document.createElement("img");
+  logoBox.classList.add("logo__img");
+  logoBox.src = arrBrandLogo[i];
+  brandLogo.appendChild(logoBox);
+}
+
+const textPortfolio = document.createElement("a");
+textPortfolio.classList.add("text__port");
+textPortfolio.textContent = "@2022.Portfolio. All right reserved.";
+footer.appendChild(textPortfolio);
