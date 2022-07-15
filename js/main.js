@@ -8,6 +8,7 @@ for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
 
   let navbarItemLink = document.createElement("a");
   navbarItemLink.classList.add("navbar__item-link");
+  navbarItemLink.href = "#";
   navbarItemLink.innerHTML = arrItemNavbar[i];
 
   navbarItemElement.appendChild(navbarItemLink);
@@ -340,5 +341,5 @@ for (let i = 0; i < arrBrandLogo.length; i = i + 1) {
 
 const textPortfolio = document.createElement("a");
 textPortfolio.classList.add("text__port");
-textPortfolio.textContent = "@2022.Portfolio. All right reserved.";
+textPortfolio.textContent = "@ 2022. Portfolio. All right reserved.";
 footer.appendChild(textPortfolio);

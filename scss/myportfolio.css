@@ -41,6 +41,7 @@
         list-style: none;
         padding: 0px 15px; }
         .header__wrap .header__navigation .navbar__item-link {
+          text-decoration: none;
           font-size: 18px;
           font-family: "Roboto";
           color: #ffff;
