@@ -1,29 +1,39 @@
 //header__wrap
-//selector navbar
+
 const navbar = document.querySelector(".navbar");
-const arrItemNavbar = ["Home", "About", "Project", "Portfolio", "Contact Me"];
+const arrItemNavbar = [
+  {
+    name: "Home",
+    id: "home",
+  },
+  {
+    name: "About",
+    id: "about",
+  },
+  {
+    name: "Project",
+    id: "project",
+  },
+
+  {
+    name: "Contact Me",
+    id: "contact",
+  },
+];
+
 for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   let navbarItemElement = document.createElement("li");
   navbarItemElement.classList.add("navbar__item");
 
   let navbarItemLink = document.createElement("a");
   navbarItemLink.classList.add("navbar__item-link");
-  // navbarItemLink.href = "#main1";
-  navbarItemLink.innerHTML = arrItemNavbar[i];
+
+  const arrItem = arrItemNavbar[i];
+  navbarItemLink.innerHTML = arrItem.name;
+  navbarItemLink.href = `#tab-${arrItem.id}`;
   navbarItemElement.appendChild(navbarItemLink);
   navbar.appendChild(navbarItemElement);
 }
-//click element navbar show content
-// document.querySelector("navbar__item-link:nth-child(1)").href = "#tab-home";
-// tabHome.hr = "#tab-home";
-// console.log(tabHome);
-
-// const tabAbout = document.querySelector("navbar__item-link:nth-child(2)");
-// tabAbout.href = "#tab-about";
-
-// const tabProject = document.querySelector("navbar__item-link:nth-child(3)");
-// tabProject.href = "#tab-project";
-// end header__wrap
 
 const bodyLeft = document.querySelector(".body__left");
 let inforContent = document.createElement("div");
@@ -226,6 +236,7 @@ const contactContainerElement = document.querySelector(".contact__container");
 
 const contactContent = document.createElement("div");
 contactContent.classList.add("contact__content");
+contactContent.id = "tab-contact";
 contactContainerElement.appendChild(contactContent);
 
 const inner = document.createElement("div");
@@ -338,11 +349,18 @@ const arrBrandLogo = [
 ];
 
 for (let i = 0; i < arrBrandLogo.length; i = i + 1) {
-  const logoBox = document.createElement("img");
-  logoBox.classList.add("logo__img");
-  logoBox.src = arrBrandLogo[i];
+  const logoBox = document.createElement("a");
+  logoBox.classList.add("logo__box");
+
+  const logoImg = document.createElement("img");
+  logoImg.classList.add("logo__img");
+  logoImg.src = arrBrandLogo[i];
+
+  logoBox.appendChild(logoImg);
   brandLogo.appendChild(logoBox);
 }
+// const facebookLogo = document.querySelector("logo__box:nth-child(1)");
+// console.log(facebookLogo);
 
 const textPortfolio = document.createElement("a");
 textPortfolio.classList.add("text__port");
