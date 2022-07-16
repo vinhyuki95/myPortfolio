@@ -8,16 +8,21 @@ for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
 
   let navbarItemLink = document.createElement("a");
   navbarItemLink.classList.add("navbar__item-link");
-  navbarItemLink.href = "#";
+  // navbarItemLink.href = "#main1";
   navbarItemLink.innerHTML = arrItemNavbar[i];
-
   navbarItemElement.appendChild(navbarItemLink);
   navbar.appendChild(navbarItemElement);
 }
-// const globalLogo = document.createElement("img");
-// globalLogo.classList.add("global__logo");
-// globalLogo.src = "../../img/globe-solid.svg";
+//click element navbar show content
+// document.querySelector("navbar__item-link:nth-child(1)").href = "#tab-home";
+// tabHome.hr = "#tab-home";
+// console.log(tabHome);
 
+// const tabAbout = document.querySelector("navbar__item-link:nth-child(2)");
+// tabAbout.href = "#tab-about";
+
+// const tabProject = document.querySelector("navbar__item-link:nth-child(3)");
+// tabProject.href = "#tab-project";
 // end header__wrap
 
 const bodyLeft = document.querySelector(".body__left");
