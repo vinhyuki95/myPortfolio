@@ -245,11 +245,11 @@ contactContent.appendChild(inner);
 
 const arrtitles = [
   {
-    titleText: "GET IN TOUCH",
+    titleText: "Contact Me",
   },
 
   {
-    titleText: "Contact Me",
+    titleText: "Get in Touch",
   },
 ];
 
@@ -342,19 +342,31 @@ const brandLogo = document.createElement("div");
 brandLogo.classList.add("brand__logo");
 footer.appendChild(brandLogo);
 
-const arrBrandLogo = [
-  "../../img/footer/facebook-brand.svg",
-  "../../img/footer/github-brand.svg",
-  "../../img/footer/linkedin-brand.svg",
+const arrBrandLogos = [
+  {
+    logo: "../../img/footer/facebook-brand.svg",
+    href: "https://www.facebook.com/profile.php?id=100004369698133",
+  },
+  {
+    logo: "../../img/footer/github-brand.svg",
+    href: "https://github.com/",
+  },
+  {
+    logo: "../../img/footer/linkedin-brand.svg",
+    href: "https://www.linkedin.com/in/vinhyuki-le-922001233/",
+  },
 ];
+for (let i = 0; i < arrBrandLogos.length; i = i + 1) {
+  const arrBrandLogo = arrBrandLogos[i];
 
-for (let i = 0; i < arrBrandLogo.length; i = i + 1) {
   const logoBox = document.createElement("a");
   logoBox.classList.add("logo__box");
+  logoBox.href = arrBrandLogo.href;
 
   const logoImg = document.createElement("img");
   logoImg.classList.add("logo__img");
-  logoImg.src = arrBrandLogo[i];
+
+  logoImg.src = arrBrandLogo.logo;
 
   logoBox.appendChild(logoImg);
   brandLogo.appendChild(logoBox);
