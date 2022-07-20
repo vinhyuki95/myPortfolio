@@ -343,7 +343,7 @@ h3 {
   justify-content: center;
 }
 .flexBox .flexLeft .flexLeft__menu {
-  width: 60%;
+  width: 70%;
   padding: 16px;
   display: flex;
 }
@@ -415,6 +415,11 @@ h3 {
   padding: 15px 0px;
 }
 
+@media only screen and (max-width: 1041px) {
+  .flexBox .flexLeft .flexLeft__menu {
+    width: 400px;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .body__container {
     padding-top: 40px;
@@ -455,6 +460,9 @@ h3 {
     align-items: center;
     padding-top: 0;
   }
+  .about__container .about__right {
+    width: 80%;
+  }
   .item__name {
     padding: 20px 0px 40px 0px;
   }
@@ -466,6 +474,13 @@ h3 {
   }
   .about__container .about__left {
     margin: 0px;
+  }
+  .flexBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flexBox .flexRight {
+    width: 70%;
   }
 }
 @media only screen and (max-width: 768px) {
