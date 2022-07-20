@@ -1,4 +1,4 @@
-//header__wrap
+//headerWrap
 
 const navbar = document.querySelector(".navbar");
 const arrItemNavbar = [
@@ -34,7 +34,45 @@ for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
   navbarItemElement.appendChild(navbarItemLink);
   navbar.appendChild(navbarItemElement);
 }
+//event click menu-icon show sidebar (breakpoint: 768px)
+const menuIcon = document.querySelector(".menu-icon");
+const headerWrap = document.querySelector(".header__wrap");
 
+const sideBarContainer = document.createElement("div");
+sideBarContainer.classList.add("sidebar__container");
+
+headerWrap.appendChild(sideBarContainer);
+
+menuIcon.onclick = function () {
+  // sideBarContainer.classList.toggle("active");
+  // console.log(sideBarContainer);
+  if (sideBarContainer.classList.contains("active")) {
+    sideBarContainer.classList.remove("active");
+  } else {
+    sideBarContainer.classList.add("active");
+  }
+};
+// click vao navbar se remove class active
+const navbarItem = document.querySelectorAll(".navbar__item");
+console.log(navbarItem);
+navbarItem.onclick = function () {
+  sideBarContainer.classList.remove("active");
+};
+
+// dùng lại arrItemNavbar ở trên để show navItem trong sidebar khi active
+for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
+  let navbarItem = document.createElement("a");
+  navbarItem.classList.add("navbar__item");
+
+  const arrItem = arrItemNavbar[i];
+  navbarItem.innerHTML = arrItem.name;
+  navbarItem.href = `#tab-${arrItem.id}`;
+  sideBarContainer.appendChild(navbarItem);
+}
+
+//end-event onclick menu-icon
+
+//selector body__left
 const bodyLeft = document.querySelector(".body__left");
 let inforContent = document.createElement("div");
 inforContent.classList.add("information__content");
@@ -119,64 +157,6 @@ const projectContent = document.createElement("div");
 projectContent.classList.add("project__content");
 
 projectContainer.appendChild(projectContent);
-
-//create an array(cách 1 lấy từng vị trí của index)
-// const arrWebDemo = [
-//   [["../../img/project/demo-article.png"], "Writy Article Website"],
-//   [
-// [
-//   "../../img/project/demo1-foodDX.png",
-//   "../../img/project/demo2-foodDX.png",
-//   "../../img/project/demo3-foodDX.png",
-//   "../../img/project/demo4-foodDX.png",
-//   "../../img/project/demo5-foodDX.png",
-//   "../../img/project/demo6-foodDX.png",
-//   "../../img/project/demo7-foodDX.png",
-// ],
-//     "FoodDX Website",
-//   ],
-//   [
-//     [
-//       "../../img/project/tradingWeb-Login.png",
-//       "../../img/project/market-picture1.png",
-//       "../../img/project/market-picture2.png",
-//     ],
-//     "Trade Website",
-//   ],
-// ];
-
-// for (let i = 0; i < arrWebDemo.length; i = i + 1) {
-//   const menuItem = document.createElement("div");
-//   menuItem.classList.add("menu-item-containerWrap");
-//   projectContent.appendChild(menuItemContainer);
-
-//   const itemDemoImg = document.createElement("img");
-//   itemDemoImg.classList.add("item__img");
-//   itemDemoImg.src = arrWebDemo[i][0];
-//   menuItem.appendChild(itemDemoImg);
-
-//   if (arrWebDemo[i][0][2] !== undefined) {
-//     const marketDemo = document.querySelector(
-//       ".menu-item-containerWrap:last-child .item__img"
-//     );
-//     marketDemo.src = arrWebDemo[i][0][0];
-//     let currentIndex = -1;
-//     setInterval(function () {
-//       currentIndex += 1;
-//       currentIndex %= arrWebDemo.length;
-
-//       document.querySelector(
-//         `.menu-item-containerWrap:nth-child(${i + 1}) .item__img`
-//       ).src = arrWebDemo[i][0][currentIndex];
-//     }, 2000);
-//   }
-
-//   const itemDemoName = document.createElement("div");
-//   itemDemoName.classList.add("item__name");
-//   itemDemoName.innerHTML = arrWebDemo[i][1];
-//   menuItem.appendChild(itemDemoName);
-// }
-
 //tạo object, mỗi một object là một project(cách2 dùng object)
 const projects = [
   {
@@ -221,7 +201,6 @@ for (let i = 0; i < projects.length; i = i + 1) {
     currentIndex += 1;
     currentIndex %= project.images.length;
     itemImg.src = project.images[currentIndex];
-    console.log(itemImg);
   }, 2000);
 
   let itemName = document.createElement("a");
@@ -371,8 +350,6 @@ for (let i = 0; i < arrBrandLogos.length; i = i + 1) {
   logoBox.appendChild(logoImg);
   brandLogo.appendChild(logoBox);
 }
-// const facebookLogo = document.querySelector("logo__box:nth-child(1)");
-// console.log(facebookLogo);
 
 const textPortfolio = document.createElement("a");
 textPortfolio.classList.add("text__port");
