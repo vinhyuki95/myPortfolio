@@ -100,13 +100,13 @@ inforContent.appendChild(bttGetInTouch);
 
 const bodyRight = document.querySelector(".body__right");
 const backgroundImg = document.createElement("img");
-backgroundImg.src = "../img/bg-right.jpg";
+backgroundImg.src = "img/bg-right.jpg";
 bodyRight.appendChild(backgroundImg);
 
 //selector about__left
 const aboutLeft = document.querySelector(".about__left");
 const avataImg = document.createElement("img");
-avataImg.src = "../img/avata.jpg";
+avataImg.src = "img/avata.jpg";
 aboutLeft.appendChild(avataImg);
 
 //selector about__right
@@ -160,26 +160,26 @@ projectContainer.appendChild(projectContent);
 //tạo object, mỗi một object là một project(cách2 dùng object)
 const projects = [
   {
-    images: ["../../img/project/demo-article.png"],
+    images: ["img/project/demo-article.png"],
     titleImg: "Writy Article Website",
   },
   {
     images: [
-      "../../img/project/demo1-foodDX.png",
-      "../../img/project/demo2-foodDX.png",
-      "../../img/project/demo3-foodDX.png",
-      "../../img/project/demo4-foodDX.png",
-      "../../img/project/demo5-foodDX.png",
-      "../../img/project/demo6-foodDX.png",
-      "../../img/project/demo7-foodDX.png",
+      "img/project/demo1-foodDX.png",
+      "img/project/demo2-foodDX.png",
+      "img/project/demo3-foodDX.png",
+      "img/project/demo4-foodDX.png",
+      "img/project/demo5-foodDX.png",
+      "img/project/demo6-foodDX.png",
+      "img/project/demo7-foodDX.png",
     ],
     titleImg: "FoodDX Website",
   },
   {
     images: [
-      "../../img/project/tradingWeb-Login.png",
-      "../../img/project/market-picture1.png",
-      "../../img/project/market-picture2.png",
+      "img/project/tradingWeb-Login.png",
+      "img/project/market-picture1.png",
+      "img/project/market-picture2.png",
     ],
     titleImg: "Trade Website",
   },
@@ -256,12 +256,9 @@ flexBox.appendChild(flexRight);
 
 //create arr for flexLeft
 const arrflexLeft = [
-  ["../../img/icon-contact/email-icon.svg", "Vinhyuki1995@gmail.com"],
-  [
-    "../../img/icon-contact/location-icon.svg",
-    "#13-22 Lorong2 Toa Payoh Center",
-  ],
-  ["../../img/icon-contact/phone-icon.svg", "+ 65-9893-1879"],
+  ["img/icon-contact/email-icon.svg", "Vinhyuki1995@gmail.com"],
+  ["img/icon-contact/location-icon.svg", "#13-22 Lorong2 Toa Payoh Center"],
+  ["img/icon-contact/phone-icon.svg", "+ 65-9893-1879"],
 ];
 for (let i = 0; i < arrflexLeft.length; i = i + 1) {
   const menuItemContainer = document.createElement("div");
@@ -323,15 +320,15 @@ footer.appendChild(brandLogo);
 
 const arrBrandLogos = [
   {
-    logo: "../../img/footer/facebook-brand.svg",
+    logo: "img/footer/facebook-brand.svg",
     href: "https://www.facebook.com/profile.php?id=100004369698133",
   },
   {
-    logo: "../../img/footer/github-brand.svg",
+    logo: "img/footer/github-brand.svg",
     href: "https://github.com/",
   },
   {
-    logo: "../../img/footer/linkedin-brand.svg",
+    logo: "img/footer/linkedin-brand.svg",
     href: "https://www.linkedin.com/in/vinhyuki-le-922001233/",
   },
 ];
