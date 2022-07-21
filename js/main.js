@@ -308,7 +308,7 @@ bttMessage.placeholder = "Enter your message";
 // create a button
 const bttSendMessage = document.createElement("button");
 bttSendMessage.classList.add("btt__sentMessage");
-bttSendMessage.textContent = "Send message!";
+bttSendMessage.textContent = "Send message";
 flexRight.appendChild(bttSendMessage);
 
 //display footer content
