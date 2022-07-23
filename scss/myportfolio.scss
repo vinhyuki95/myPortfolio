@@ -17,7 +17,7 @@ $col-blue: #08fdd8;
 }
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1410px;
   padding: 0px 15px;
   position: ralative;
   margin: 0px auto;
@@ -362,18 +362,20 @@ h3 {
   flex-direction: row;
   width: 100%;
   padding-top: 50px;
+  justify-content: center;
 }
 
 .flexLeft {
-  padding-top: 40px;
-  width: 50%;
+  // padding-top: 40px;
+  // width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   .flexLeft__menu {
-    width: 70%;
+    width: 35%;
     padding: 16px;
     display: flex;
     .img__item {
@@ -398,6 +400,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   width: 50%;
+  display: none;
   input {
     cursor: pointer;
     margin-top: 20px;
@@ -833,5 +836,12 @@ h3 {
   .btt_getInTouch {
     margin-top: 30px;
     font-size: 14px;
+  }
+}
+@media only screen and(min-width:1400px) {
+  .about__container {
+    .about__left img {
+      height: 80%;
+    }
   }
 }

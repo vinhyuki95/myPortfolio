@@ -10,7 +10,7 @@
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1410px;
   padding: 0px 15px;
   position: ralative;
   margin: 0px auto; }
@@ -280,18 +280,18 @@ h3 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 50px; }
+  padding-top: 50px;
+  justify-content: center; }
 
 .flexLeft {
-  padding-top: 40px;
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
   .flexLeft .flexLeft__menu {
-    width: 70%;
+    width: 35%;
     padding: 16px;
     display: flex; }
     .flexLeft .flexLeft__menu .img__item {
@@ -310,7 +310,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%; }
+  width: 50%;
+  display: none; }
   .flexRight input {
     cursor: pointer;
     margin-top: 20px;
@@ -587,5 +588,8 @@ h3 {
   .btt_getInTouch {
     margin-top: 30px;
     font-size: 14px; } }
+@media only screen and (min-width: 1400px) {
+  .about__container .about__left img {
+    height: 80%; } }
 
 /*# sourceMappingURL=myportfolio.css.map */
