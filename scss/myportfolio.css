@@ -455,7 +455,7 @@ h3 {
 @media only screen and (max-width: 640px) {
   .body__container .body__left {
     padding: 0;
-    height: calc(100vh - 180px); }
+    height: calc(100vh - 161px); }
 
   .information__content div:nth-child(3) {
     font-size: 60px; }
@@ -501,7 +501,10 @@ h3 {
 
   .item__img {
     height: 218px;
-    width: 392px; } }
+    width: 392px; }
+
+  .flexLeft {
+    margin-top: 60px; } }
 @media only screen and (max-width: 480px) {
   .about__container .about__left img {
     height: 70%; }

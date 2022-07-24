@@ -644,7 +644,7 @@ h3 {
   .body__container {
     .body__left {
       padding: 0;
-      height: calc(100vh - 180px);
+      height: calc(100vh - 161px);
     }
   }
   .information__content {
@@ -682,16 +682,20 @@ h3 {
       margin-bottom: 14px;
     }
   }
+
   .btt__hireMe {
     margin-top: 18px;
     padding: 12px 40px;
   }
+
   .btt_getInTouch {
     font-size: 17px;
   }
+
   .title__content {
     font-size: 34px;
   }
+
   .contact__content {
     .inner {
       .title__item:first-child {
@@ -699,12 +703,18 @@ h3 {
       }
     }
   }
+
   .flexBox {
     padding: 0px;
   }
+
   .item__img {
     height: 218px;
     width: 392px;
+  }
+
+  .flexLeft {
+    margin-top: 60px;
   }
 }
 @media only screen and(max-width: 480px) {
