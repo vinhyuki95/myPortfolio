@@ -134,11 +134,14 @@ for (let i = 0; i < arraboutRight.length; i = i + 1) {
   aboutRight.appendChild(aboutContent);
 }
 
-const bttHireMe = document.createElement("button");
-bttHireMe.classList.add("btt__hireMe");
-bttHireMe.textContent = "Hire Me";
+const bttContactBox = document.createElement("a");
+bttContactBox.href = "#tab-contact";
+const bttContact = document.createElement("button");
+bttContactBox.appendChild(bttContact);
+bttContact.classList.add("btt__contact");
+bttContact.textContent = "Contact Me";
 
-aboutContent.appendChild(bttHireMe);
+aboutContent.appendChild(bttContactBox);
 
 // selector project__containerWrap
 const projectContainer = document.querySelector(".project__container");
