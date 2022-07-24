@@ -497,8 +497,7 @@ h3 {
       display: none;
     }
     .body__left {
-      padding: 0;
-      height: calc(100vh - 100px);
+      padding: 100px 0px;
     }
   }
 
@@ -643,8 +642,7 @@ h3 {
 @media only screen and(max-width: 640px) {
   .body__container {
     .body__left {
-      padding: 0;
-      height: calc(100vh - 161px);
+      padding: 60px 0px;
     }
   }
   .information__content {
