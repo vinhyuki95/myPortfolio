@@ -291,7 +291,7 @@ h3 {
   align-items: center;
   justify-content: center; }
   .flexLeft .flexLeft__menu {
-    width: 35%;
+    width: 354px;
     padding: 16px;
     display: flex; }
     .flexLeft .flexLeft__menu .img__item {
@@ -354,18 +354,7 @@ h3 {
   .footer .text__port {
     padding: 15px 0px; }
 
-@media only screen and (max-width: 1041px) {
-  .flexBox .flexLeft .flexLeft__menu {
-    width: 400px; } }
-@media only screen and (max-width: 1024px) {
-  .body__container {
-    padding-top: 40px; }
-    .body__container .body__right img {
-      height: 450px; }
-
-  .about__container .about__left img {
-    height: 90%; } }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .header__wrap {
     padding: 30px 0px; }
 
@@ -464,6 +453,10 @@ h3 {
   .flexBox .flexLeft .flexLeft__menu .img__item {
     height: 24px; } }
 @media only screen and (max-width: 640px) {
+  .body__container .body__left {
+    padding: 0;
+    height: calc(100vh - 180px); }
+
   .information__content div:nth-child(3) {
     font-size: 60px; }
 
@@ -588,8 +581,5 @@ h3 {
   .btt_getInTouch {
     margin-top: 30px;
     font-size: 14px; } }
-@media only screen and (min-width: 1400px) {
-  .about__container .about__left img {
-    height: 80%; } }
 
 /*# sourceMappingURL=myportfolio.css.map */
