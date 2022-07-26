@@ -55,7 +55,7 @@
       display: flex;
       justify-content: center;
       align-items: center; }
-      .header__wrap .header__navigation a .global__logo {
+      .header__wrap .header__navigation a .github__logo {
         padding: 0px 20px;
         height: 24px;
         filter: invert(89%) sepia(58%) saturate(2647%) hue-rotate(89deg) brightness(101%) contrast(98%); }
