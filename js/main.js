@@ -197,12 +197,15 @@ const projects = [
 for (let i = 0; i < projects.length; i = i + 1) {
   const menuItem = document.createElement("div");
   menuItem.classList.add("menu-item-container");
+  let itemImgBox = document.createElement("a");
+  menuItem.appendChild(itemImgBox);
   // projectContent.appendChild(menuItem);
 
   const project = projects[i];
   let itemImg = document.createElement("img");
+  itemImgBox.appendChild(itemImg);
   itemImg.classList.add("item__img");
-  menuItem.appendChild(itemImg);
+  itemImgBox.href = project.href;
   itemImg.src = project.images[0];
 
   let currentIndex = 0;
