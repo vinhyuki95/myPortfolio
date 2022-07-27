@@ -54,10 +54,9 @@ menuIcon.onclick = function () {
 };
 // click vao navbar se remove class active
 const navbarItem = document.querySelectorAll(".navbar__item");
-console.log(navbarItem);
-navbarItem.onclick = function () {
-  sideBarContainer.classList.remove("active");
-};
+// navbarItem.onclick = function () {
+//   sideBarContainer.classList.remove("active");
+// };
 
 // dùng lại arrItemNavbar ở trên để show navItem trong sidebar khi active
 for (let i = 0; i < arrItemNavbar.length; i = i + 1) {
@@ -93,10 +92,14 @@ for (let i = 0; i < arrInformation.length; i = i + 1) {
   inforContent.appendChild(textElement);
 }
 
+//add link dẫn tới trang portfolio
+const bttGetInTouchBox = document.createElement("a");
+bttGetInTouchBox.href = "https://vinhyuki95.github.io/myPortfolio/";
 const bttGetInTouch = document.createElement("button");
+bttGetInTouchBox.appendChild(bttGetInTouch);
+inforContent.appendChild(bttGetInTouchBox);
 bttGetInTouch.classList.add("btt_getInTouch");
 bttGetInTouch.textContent = "VIEW PORTFOLIO";
-inforContent.appendChild(bttGetInTouch);
 
 const bodyRight = document.querySelector(".body__right");
 const backgroundImg = document.createElement("img");
@@ -165,6 +168,7 @@ const projects = [
   {
     images: ["img/project/demo-article.png"],
     titleImg: "Writy Article Website",
+    href: "https://vinhyuki95.github.io/update.writy.html/",
   },
   {
     images: [
@@ -177,6 +181,7 @@ const projects = [
       "img/project/demo7-foodDX.png",
     ],
     titleImg: "FoodDX Website",
+    href: "https://vinhyuki95.github.io/FoodDX/",
   },
   {
     images: [
@@ -185,6 +190,7 @@ const projects = [
       "img/project/market-picture2.png",
     ],
     titleImg: "Trade Website",
+    href: "https://vinhyuki95.github.io/FoodDX/",
   },
 ];
 
@@ -210,6 +216,7 @@ for (let i = 0; i < projects.length; i = i + 1) {
   itemName.classList.add("item__name");
   menuItem.appendChild(itemName);
   itemName.innerHTML = project.titleImg;
+  itemName.href = project.href;
   projectContent.appendChild(menuItem);
 }
 
