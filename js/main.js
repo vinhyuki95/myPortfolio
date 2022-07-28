@@ -190,7 +190,7 @@ const projects = [
       "img/project/market-picture2.png",
     ],
     titleImg: "Trade Website",
-    href: "https://vinhyuki95.github.io/FoodDX/",
+    href: "https://vinhyuki95.github.io/tradingWeb/",
   },
 ];
 
